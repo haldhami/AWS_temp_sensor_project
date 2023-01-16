@@ -19,13 +19,13 @@ try:
         print(f"The reading is: {reading} at time: {t}")
 
         # Create json object for posting data
-        params = json.dumps(dict(   # add second temp to dict
+        payload = json.dumps(dict(   # add second temp to dict
             inside_temp=reading,
             time=t
         ))
 
-        url = 'https://httpbin.org/put' # Change url to AWS api endpoint
-        r = requests.put(url, data=params)
+        url = 'https://httpbin.org/post' # Change url to AWS api endpoint
+        r = requests.post(url, data=payload)
         # print(r.status_code)
 
 except KeyboardInterrupt:
