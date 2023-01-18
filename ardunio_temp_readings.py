@@ -41,12 +41,12 @@ try:
 
         # Create json object for posting data
         payload = json.dumps(dict(
-            time = t,
+            time=t,
             temp_in=t_in,
             temp_out=t_out
         ))
 
-        r = requests.post(url, headers=header, data=payload, auth=aws_auth)
+        r = requests.put(url, headers=header, data=payload, auth=aws_auth)
 
         print(r.status_code)
 
