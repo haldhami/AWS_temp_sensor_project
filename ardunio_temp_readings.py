@@ -11,7 +11,7 @@ load_dotenv()
 AWS_ACCESS_KEY = os.getenv('AWS_ACCESS_KEY')
 AWS_SECRET_KEY = os.getenv('AWS_SECRET_KEY')
 
-input_path = '/dev/tty.usbmodem1101' # Change to correct path on rpi
+input_path = '/dev/ttyACM0' # Change to correct path on rpi
 ser = serial.Serial(input_path)
 
 
@@ -20,8 +20,8 @@ url = 'https://1rf9nmj62a.execute-api.us-east-1.amazonaws.com/items'
 header = {'Content-Type':'application/json'}
 aws_auth = AWSSigV4(
     'execute-api',
-    aws_access_key_id=AWS_ACCESS_KEY
-    aws_secret_access_key=AWS_SECRET_KEY
+    aws_access_key_id=AWS_ACCESS_KEY,
+    aws_secret_access_key=AWS_SECRET_KEY,
     region='us-east-1'
 )
 
@@ -47,6 +47,8 @@ try:
         ))
 
         r = requests.post(url, headers=header, data=payload, auth=aws_auth)
+
+        print(r.status_code)
 
 except KeyboardInterrupt:
     ser.close()
