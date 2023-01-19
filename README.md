@@ -8,7 +8,7 @@ I have a keen interest in working with sensor data and plan to start a more ambi
 The purpose of this project was to allow me to highlight and practice several of my skills, including: Python, sensors, Arduino, electronics, data handling, AWS, and security. This was done by setting up sensors on an Ardunio, learning how to get these readings onto a computer using Python, and uploading the data to a DynamoDB instance on AWS via an HTTP API endpoint secured by IAM authentication.
 
 ## GET Endpoint
-If you are interested in obtaining the data collected so far via a JSON object, you can make the call with a GET request to this url: 
+If you are interested in obtaining the data collected so far via a JSON object, and the resources are still running, you can make the call with a GET request to this url: 
 https://1rf9nmj62a.execute-api.us-east-1.amazonaws.com/items
 
 Note that the data is not returned in any order.
