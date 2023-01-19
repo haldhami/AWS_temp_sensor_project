@@ -8,4 +8,4 @@ I have a keen interest in working with sensor data and plan to start a more ambi
 The purpose of this project was to allow me to highlight and practice several of my skills, including: Python, sensors, Arduino, electronics, data handling, AWS, and security. This was done by setting up sensors on an Ardunio, learning how to get these readings onto a computer using Python, and uploading the data to a DynamoDB instance on AWS via an HTTP API endpoint secured by IAM authentication.
 
 ## How I achieved it
-The kit used was an Elegoo Arduino Uno connected to a Raspberry Pi 4 via USB which would read the sensor data with pySerial. The thermistors were NTC thermistors with a $R_0$ value of 10,000 $ \Omega$. The script then uses a http POST request to upload the sensor data to DynamoDB.
+The kit used was an Elegoo Arduino Uno connected to a Raspberry Pi 4 via USB which would read the sensor data with pySerial. The thermistors were NTC thermistors with a $R_0$ value of 10,000 \Omega. The script then uses a http POST request to upload the sensor data to DynamoDB.
