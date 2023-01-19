@@ -27,7 +27,7 @@ export const handler = async (event, context) => {
           new DeleteCommand({
             TableName: tableName,
             Key: {
-              time: event.pathParameters.time,
+              time: parseInt(event.pathParameters.time),
             },
           })
         );
@@ -38,7 +38,7 @@ export const handler = async (event, context) => {
           new GetCommand({
             TableName: tableName,
             Key: {
-              time: event.pathParameters.time,
+              time: parseInt(event.pathParameters.time),
             },
           })
         );
