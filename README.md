@@ -7,6 +7,12 @@ I have a keen interest in working with sensor data and plan to start a more ambi
 ## Aim
 The purpose of this project was to allow me to highlight and practice several of my skills, including: Python, sensors, Arduino, electronics, data handling, AWS, and security. This was done by setting up sensors on an Ardunio, learning how to get these readings onto a computer using Python, and uploading the data to a DynamoDB instance on AWS via an HTTP API endpoint secured by IAM authentication.
 
+## Electronics Setup
+
+<img width="513" alt="Screenshot 2023-01-19 at 14 21 17" src="https://user-images.githubusercontent.com/66445070/213466603-dca4c95d-a0c0-4ac4-b3dd-667aa606d013.png">
+
+The setup used was similar to the above, with the differences being that the thermistors were plugged into A0 and A1. 
+
 ## How I achieved it
 I have two thermistors connected to an Arduino, as described in *insert file name*, where one thermistor is on the electronic breadboard inside my flat, and the other is outside via a window. The kit used was an Elegoo Arduino Uno connected to a Raspberry Pi 4 via USB which would read the sensor data with pySerial. The thermistors were NTC thermistors (NJ28NA0103, see attached data sheet for more info), and the Steinhart-Hart equation was used to correlate the readings from the thermistor into temperatures. 
 
