@@ -11,6 +11,8 @@ The purpose of this project was to allow me to highlight and practice several of
 If you are interested in obtaining the data collected so far via a JSON object, you can make the call with a GET request to this url: 
 https://1rf9nmj62a.execute-api.us-east-1.amazonaws.com/items
 
+Note that the data is not returned in any order.
+
 ## Electronics Setup
 
 <img width="513" alt="Screenshot 2023-01-19 at 14 21 17" src="https://user-images.githubusercontent.com/66445070/213466603-dca4c95d-a0c0-4ac4-b3dd-667aa606d013.png">
