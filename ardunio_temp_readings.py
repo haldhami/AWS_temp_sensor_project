@@ -46,9 +46,12 @@ try:
             temp_out=t_out
         ))
 
-        r = requests.put(url, headers=header, data=payload, auth=aws_auth)
-
-        print(r.status_code)
+        try:
+            r = requests.put(url, headers=header, data=payload, auth=aws_auth)
+            print(r.status_code)
+        except ConnectionError:
+            pass
+        
 
 except KeyboardInterrupt:
     ser.close()
